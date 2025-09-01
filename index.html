@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Messenger Clone Dark Mode</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="authContainer" class="auth-container">
+    <div class="auth-box login-box active">
+      <h2>Login</h2>
+      <input id="loginUsername" placeholder="Username" />
+      <button id="loginBtn">Login</button>
+      <p>Don't have an account? <span id="showSignup">Sign up</span></p>
+    </div>
+    <div class="auth-box signup-box">
+      <h2>Sign Up</h2>
+      <input id="signupUsername" placeholder="Username" />
+      <button id="signupBtn">Sign Up</button>
+      <p>Already have an account? <span id="showLogin">Login</span></p>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="stories-bar">
+        <div class="story add-story">+</div>
+        <div class="story">A</div>
+        <div class="story">B</div>
+        <div class="story">C</div>
+      </div>
+      <button id="inviteBtn" class="sidebar-btn">Invite Link</button>
+      <button id="openSettings" class="sidebar-btn">⚙️ Settings</button>
+    </aside>
+    <div class="main-chat">
+      <header class="chat-header">Chat with Zara</header>
+      <div id="chatBox" class="chat-box"></div>
+      <form id="chatForm" class="chat-form">
+        <textarea id="userInput" placeholder="Type a message..." required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div id="settingsPanel" class="settings-panel">
+      <header class="settings-header">
+        <h3>Settings</h3>
+        <button id="closeSettings">×</button>
+      </header>
+      <section class="settings-section">
+        <strong>Theme:</strong>
+        <button id="toggleTheme">Toggle Light / Dark</button>
+      </section>
+      <section class="settings-section">
+        <strong>Username:</strong> <span id="displayUsername"></span>
+      </section>
+      <button id="logoutBtn" class="sidebar-btn">Logout</button>
+    </div>
+    <div id="overlay" class="overlay"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
